@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executive Bedspace & Study Studio — Livora</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="Livora Home">
+        <img src="assets/logo.svg" alt="Livora Logo" class="brand-logo-img" />
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Find Spaces</a></li>
+          <li><a href="dashboard.html" class="nav-link">Landlord Portal</a></li>
+          <li><a href="messages.html" class="nav-link">Messages</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#listingsSection" class="btn btn-secondary btn-sm">
+          ← Back to Search
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="listing-details-page">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="details-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="index.html#listingsSection">Davao City</a>
+        <span>/</span>
+        <span>Matina-Aplaya</span>
+      </nav>
+
+      <!-- Details Header -->
+      <div class="details-header">
+        <div>
+          <div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: center;">
+            <span class="badge badge-verified">✓ Verified Landlord</span>
+            <span class="badge badge-primary">Student Friendly</span>
+            <span style="font-size: 13px; color: var(--neutral-500);">ID: LIV-DV01</span>
+          </div>
+          <h1 class="details-title" id="listingTitle">Executive Bedspace & Study Studio</h1>
+          <p style="font-size: 14px; color: var(--neutral-600); margin-top: 4px;">
+            📍 Purok 7, Matina-Aplaya, Davao City • 3 mins walk to Ateneo & transportation hubs
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <button class="btn btn-secondary btn-sm" id="shareBtn">
+            🔗 Share
+          </button>
+          <button class="btn btn-secondary btn-sm" id="saveListingBtn">
+            ❤️ Save to Wishlist
+          </button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="details-gallery">
+        <div class="gallery-main">
+          <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1200&q=80" alt="Main Bedroom and Study" />
+        </div>
+        <div class="gallery-thumb">
+          <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=600&q=80" alt="Study Desk Area" />
+        </div>
+        <div class="gallery-thumb">
+          <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80" alt="Bathroom and Hallway" />
+        </div>
+      </div>
+
+      <!-- Details Layout Grid -->
+      <div class="details-grid">
+        <!-- Left Content -->
+        <div class="details-main-content">
+          <div style="display: flex; gap: var(--space-8); padding-bottom: var(--space-6); border-bottom: 1px solid var(--neutral-200); margin-bottom: var(--space-6);">
+            <div>
+              <div style="font-size: 12px; color: var(--neutral-500); text-transform: uppercase; font-weight: bold;">Accommodates</div>
+              <div style="font-size: 16px; font-weight: 700; color: var(--neutral-900);">1 Tenant / Bed</div>
+            </div>
+            <div>
+              <div style="font-size: 12px; color: var(--neutral-500); text-transform: uppercase; font-weight: bold;">Bathrooms</div>
+              <div style="font-size: 16px; font-weight: 700; color: var(--neutral-900);">2 En-suite Shared</div>
+            </div>
+            <div>
+              <div style="font-size: 12px; color: var(--neutral-500); text-transform: uppercase; font-weight: bold;">Internet</div>
+              <div style="font-size: 16px; font-weight: 700; color: var(--neutral-900);">150 Mbps Fiber</div>
+            </div>
+            <div>
+              <div style="font-size: 12px; color: var(--neutral-500); text-transform: uppercase; font-weight: bold;">Gender Policy</div>
+              <div style="font-size: 16px; font-weight: 700; color: var(--neutral-900);">Coed / Separate Wings</div>
+            </div>
+          </div>
+
+          <h3 class="details-section-title">About this space</h3>
+          <p style="color: var(--neutral-700); line-height: 1.7; margin-bottom: var(--space-6);">
+            Designed thoughtfully for university students and medical interns. Each bed is fitted with an ergonomic memory-foam mattress, blackout privacy curtain, private bedside reading light, and lockable under-bed steel locker. Located in a secure gated subdivision in Matina-Aplaya with 24/7 CCTV surveillance, biometric access, and an active quiet-hours study policy from 10 PM.
+          </p>
+
+          <h3 class="details-section-title">Amenities & Inclusions</h3>
+          <div class="amenities-grid">
+            <div class="amenity-item"><span class="amenity-icon-check">✓</span> High-speed 150 Mbps Fiber Wi-Fi</div>
+            <div class="amenity-item"><span class="amenity-icon-check">✓</span> Individual Air Conditioning with Sub-meter</div>
+            <div class="amenity-item"><span class="amenity-icon-check">✓</span> Dedicated Study Table & Chair</div>
+            <div class="amenity-item"><span class="amenity-icon-check">✓</span> Free Filtered Hot & Cold Drinking Water</div>
+            <div class="amenity-item"><span class="amenity-icon-check">✓</span> Induction Cooking Area & Microwave</div>
+            <div class="amenity-item"><span class="amenity-icon-check">✓</span> 24/7 CCTV & Keycard Gate Access</div>
+            <div class="amenity-item"><span class="amenity-icon-check">✓</span> Automatic Washing Machine Area</div>
+            <div class="amenity-item"><span class="amenity-icon-check">✓</span> Motorbike & Bicycle Parking</div>
+          </div>
+
+          <!-- Host Card -->
+          <h3 class="details-section-title">Meet Your Host</h3>
+          <div style="display: flex; gap: 20px; align-items: center; background: var(--neutral-50); border: 1px solid var(--neutral-200); padding: 20px; border-radius: var(--radius-lg); margin-bottom: var(--space-8);">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Host Avatar" style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover;" />
+            <div>
+              <div style="font-family: var(--font-heading); font-size: 18px; font-weight: 800; color: var(--neutral-900);">
+                Engr. Roberto Dela Cruz
+              </div>
+              <div style="font-size: 13px; color: var(--success-text); font-weight: 600; margin-top: 2px;">
+                Verified Superhost • 2+ Years Hosting on Livora
+              </div>
+              <p style="font-size: 13px; color: var(--neutral-600); margin-top: 6px;">
+                Response rate: 100% • Typically responds within 15 minutes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Sticky Booking / Inquire Widget -->
+        <aside class="booking-card">
+          <div class="booking-price-header">
+            <div>
+              <span style="font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: var(--crimson-700);">₱2,400</span>
+              <span style="font-size: 13px; color: var(--neutral-500);">/ month</span>
+            </div>
+            <div style="font-size: 13px; font-weight: 700; color: var(--neutral-800);">
+              ★ 4.92 <span style="font-weight: normal; color: var(--neutral-500);">(38 reviews)</span>
+            </div>
+          </div>
+
+          <form id="inquiryForm" onsubmit="event.preventDefault(); alert('Inquiry sent directly to Engr. Roberto! Redirecting to chat...'); window.location.href='messages.html';">
+            <div class="form-group">
+              <label class="form-label">Target Move-in Date</label>
+              <input type="date" class="form-control" required value="2026-11-01" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Expected Duration</label>
+              <select class="form-control">
+                <option>1 Semester (5 Months)</option>
+                <option selected>1 Academic Year (10 Months)</option>
+                <option>Custom / Monthly Extension</option>
+              </select>
+            </div>
+
+            <div class="booking-fee-table">
+              <div class="fee-row">
+                <span>First Month Rent</span>
+                <span>₱2,400</span>
+              </div>
+              <div class="fee-row">
+                <span>Security Deposit (Refundable)</span>
+                <span>₱2,400</span>
+              </div>
+              <div class="fee-row">
+                <span>Water & Fiber WiFi</span>
+                <span style="color: var(--success-main); font-weight: bold;">FREE INCLUDED</span>
+              </div>
+              <div class="fee-row total">
+                <span>Move-in Total</span>
+                <span>₱4,800</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+              ⚡ Send In-App Inquiry to Host
+            </button>
+            <p style="text-align: center; font-size: 12px; color: var(--neutral-500); margin-top: 10px;">
+              You won't be charged yet. Host will reply to confirm schedule.
+            </p>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Editorial Footer -->
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Livora Philippines. All rights reserved.</div>
+      <div>Designed with Warm Editorial Modernism for Mindanao Students & Landlords.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Livora — Verified Rooms & Bedspaces in Mindanao</title>
+  <meta name="description" content="Find verified rooms, bedspaces, and apartments for rent in Kidapawan City and Davao City. Direct landlord contact, student-friendly, and transparent pricing." />
+  
+  <!-- Modern Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Design System & Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="mainNavbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="Livora Home">
+        <img src="assets/logo.svg" alt="Livora Logo" class="brand-logo-img" />
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Find Spaces</a></li>
+          <li><a href="#howItWorks" class="nav-link">How It Works</a></li>
+          <li><a href="dashboard.html" class="nav-link">Landlord Portal</a></li>
+          <li><a href="messages.html" class="nav-link">Messages</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="add-property.html" class="btn btn-secondary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/><path d="M12 5v14"/>
+          </svg>
+          List a Property
+        </a>
+        <button class="btn btn-primary btn-sm js-open-login" id="navLoginBtn">
+          Sign In
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sleek Looking Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <!-- Hero Left Column: Headline, Trust Badges, and Search Hub -->
+        <div class="hero-content">
+          <div class="hero-tag-pill">
+            <span class="badge-dot"></span>
+            <span>Mindanao's #1 Student & Worker Housing Hub</span>
+          </div>
+
+          <h1 class="hero-title">
+            Find Safe, Verified Rooms & Bedspaces <span class="highlight">with Ease.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Skip the shady agents and overcrowded boards. Discover screened bedspaces, private studios, and dorms in <strong>Kidapawan City</strong> and <strong>Davao City</strong>.
+          </p>
+
+          <!-- Floating All-in-One Search Hub -->
+          <div class="hero-search-hub">
+            <div class="search-tabs" role="tablist">
+              <button class="search-tab-btn active" data-category="All" role="tab" aria-selected="true">All Spaces</button>
+              <button class="search-tab-btn" data-category="Bedspace" role="tab" aria-selected="false">Bedspaces</button>
+              <button class="search-tab-btn" data-category="Solo Studio" role="tab" aria-selected="false">Private Studios</button>
+              <button class="search-tab-btn" data-category="Apartment" role="tab" aria-selected="false">Apartments</button>
+            </div>
+
+            <div class="search-fields-row">
+              <!-- Location Field -->
+              <div class="search-field-item">
+                <span class="search-field-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Location
+                </span>
+                <select class="search-field-select" id="heroCitySelect" aria-label="Select City">
+                  <option value="All">All Cities</option>
+                  <option value="Kidapawan City">Kidapawan City</option>
+                  <option value="Davao City">Davao City</option>
+                </select>
+              </div>
+
+              <!-- Property Type Field -->
+              <div class="search-field-item">
+                <span class="search-field-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Room Type
+                </span>
+                <select class="search-field-select" id="heroTypeSelect" aria-label="Select Room Type">
+                  <option value="All">Any Type</option>
+                  <option value="Bedspace">Bedspace</option>
+                  <option value="Solo Studio">Solo Studio</option>
+                  <option value="Dormitory">Dormitory</option>
+                  <option value="Apartment">Apartment</option>
+                </select>
+              </div>
+
+              <!-- Budget Range Field -->
+              <div class="search-field-item">
+                <span class="search-field-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                  Max Budget
+                </span>
+                <select class="search-field-select" id="heroBudgetSelect" aria-label="Select Budget">
+                  <option value="All">Any Budget</option>
+                  <option value="under2000">Under ₱2,000 / mo</option>
+                  <option value="under3000">Under ₱3,000 / mo</option>
+                </select>
+              </div>
+
+              <!-- Action Search Button -->
+              <button class="btn btn-primary" id="heroSearchBtn" aria-label="Search Listings">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                </svg>
+                <span>Search</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Trust & Social Proof Counter -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-num">1,200+</span>
+              <span class="stat-desc">Verified Bedspaces</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-desc">ID-Screened Landlords</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">4.9 ★</span>
+              <span class="stat-desc">Student Satisfaction</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Floating Showcase Card with live badges -->
+        <div class="hero-visual-card">
+          <div class="showcase-main-img-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1200&q=80" 
+              alt="Executive Bedspace and Study Studio" 
+              class="showcase-main-img" 
+            />
+
+            <!-- Top Floating Pill Badges -->
+            <div class="floating-hero-pill">
+              <span style="color: #10b981;">●</span>
+              <span>⭐ Top Pick in Davao City</span>
+            </div>
+            <div class="floating-hero-price">
+              ₱2,400 <span style="font-size: 11px; font-weight: normal; opacity: 0.9;">/ mo</span>
+            </div>
+          </div>
+
+          <!-- Floating Host Micro-Card -->
+          <div class="floating-host-card">
+            <div class="host-info">
+              <img 
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" 
+                alt="Engr. Roberto Dela Cruz" 
+                class="host-avatar" 
+              />
+              <div class="host-text">
+                <div class="host-name">
+                  Engr. Roberto Dela Cruz
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="#10b981"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <span class="host-status">Verified Landlord • ⚡ Replies in &lt;15 mins</span>
+              </div>
+            </div>
+
+            <a href="listing-details.html?id=fp-1" class="btn btn-secondary btn-sm">
+              View Space
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Filter Bar -->
+    <section class="filter-bar-section" id="listingsSection">
+      <div class="container filter-bar-container">
+        <div class="filter-pills-group" role="group" aria-label="Filter listings by tag">
+          <button class="filter-chip-btn active" data-tag="all">✨ All Listings</button>
+          <button class="filter-chip-btn" data-tag="kidapawan">📍 Kidapawan City</button>
+          <button class="filter-chip-btn" data-tag="davao">🏙️ Davao City</button>
+          <button class="filter-chip-btn" data-tag="female">👩 Female Only</button>
+          <button class="filter-chip-btn" data-tag="top-rated">★ Top Rated (4.8+)</button>
+        </div>
+        <div class="results-meta" id="resultsCount">
+          Loading listings...
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamic Listings Grid -->
+    <section class="listings-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Handpicked Accommodations</div>
+            <h2 class="section-heading">Available Rooms & Bedspaces</h2>
+          </div>
+          <div style="font-size: 13px; color: var(--neutral-500);">
+            Direct owner contact • No reservation deposit traps
+          </div>
+        </div>
+
+        <div class="listings-grid" id="listingsGrid">
+          <!-- Filled dynamically by main.js with fallback support -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust & Verification Pillars -->
+    <section class="trust-section" id="howItWorks">
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto var(--space-12);">
+          <div class="section-eyebrow">Why Choose Livora</div>
+          <h2 class="section-heading">Built specifically for tenants and trusted hosts.</h2>
+          <p style="color: var(--neutral-600); font-size: 15px; margin-top: 8px;">
+            We solve the biggest pains in student and young worker boarding: fake listings, unannounced rent spikes, and lack of security.
+          </p>
+        </div>
+
+        <div class="trust-grid">
+          <div class="trust-card">
+            <div class="trust-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="trust-card-title">100% Verified Landlords</h3>
+            <p class="trust-card-desc">
+              Every host on Livora submits valid government identification, property permits, or land titles before posting bedspaces.
+            </p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="M4 12V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6"/></svg>
+            </div>
+            <h3 class="trust-card-title">Transparent Price & Bills</h3>
+            <p class="trust-card-desc">
+              See exact breakdowns for water, electricity sub-meters, and high-speed Wi-Fi upfront. No surprise end-of-month landlord surcharges.
+            </p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="trust-card-title">Direct In-App Inquiries</h3>
+            <p class="trust-card-desc">
+              Message landlords directly, schedule walkthrough visits, and confirm room availability without exposing private phone numbers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Reimagined Auth Modal (Tenant & Landlord switchable) -->
+  <div class="modal-overlay" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeAuthBtn" aria-label="Close dialog">✕</button>
+
+      <div style="text-align: center; margin-bottom: var(--space-6);">
+        <img src="assets/logo.svg" alt="Livora" style="height: 38px; margin-bottom: 8px;" />
+        <h3 id="authModalTitle" style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--neutral-900);">
+          Welcome back to Livora
+        </h3>
+        <p style="font-size: 13px; color: var(--neutral-500); margin-top: 4px;">
+          Choose your account type to proceed
+        </p>
+      </div>
+
+      <!-- Account Role Switcher -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; background: var(--neutral-100); padding: 4px; border-radius: var(--radius-pill); margin-bottom: var(--space-6);">
+        <button type="button" class="btn btn-secondary btn-sm active" id="tenantTabBtn" style="border-radius: var(--radius-pill);">
+          🧑 Student / Tenant
+        </button>
+        <button type="button" class="btn btn-ghost btn-sm" id="landlordTabBtn" style="border-radius: var(--radius-pill);">
+          🏡 Landlord / Host
+        </button>
+      </div>
+
+      <!-- Auth Form -->
+      <form id="authForm">
+        <!-- Signup-only name fields -->
+        <div id="signupNameFields" style="display: none; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+          <div class="form-group" style="margin: 0;">
+            <label class="form-label" for="authFirstName">First Name</label>
+            <input type="text" id="authFirstName" class="form-control" placeholder="Maria" />
+          </div>
+          <div class="form-group" style="margin: 0;">
+            <label class="form-label" for="authLastName">Last Name</label>
+            <input type="text" id="authLastName" class="form-control" placeholder="Santos" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="authEmail">Email Address</label>
+          <input type="email" id="authEmail" class="form-control" placeholder="name@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="authPassword">Password</label>
+          <input type="password" id="authPassword" class="form-control" placeholder="••••••••" required />
+        </div>
+
+        <!-- Landlord-only fields -->
+        <div class="form-group landlord-only-field" style="display: none;">
+          <label class="form-label" for="businessName">Boarding House / Business Name</label>
+          <input type="text" id="businessName" class="form-control" placeholder="e.g. Santos Dormitory Residences" />
+        </div>
+        <div class="form-group landlord-only-field" style="display: none;">
+          <label class="form-label" for="businessAddress">Property Address in Kidapawan/Davao</label>
+          <input type="text" id="businessAddress" class="form-control" placeholder="e.g. Purok 4, Sudapin, Kidapawan" />
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="authSubmitBtn" style="width: 100%; margin-top: 8px;">
+          LOG IN
+        </button>
+      </form>
+
+      <div style="text-align: center; margin-top: var(--space-5); font-size: 13px;">
+        <a href="#" id="toggleAuthModeBtn" style="color: var(--crimson-700); font-weight: 600; text-decoration: none;">
+          Don't have an account? Sign up
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editorial Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div>
+        <img src="assets/logo.svg" alt="Livora" style="height: 38px; filter: brightness(0) invert(1);" />
+        <p class="footer-brand-p">
+          Empowering students, young professionals, and property owners across Kidapawan City and Davao City with safe, verified, and transparent rental spaces.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Locations</div>
+        <ul class="footer-links">
+          <li><a href="#listingsSection">Kidapawan - Poblacion</a></li>
+          <li><a href="#listingsSection">Kidapawan - Sudapin</a></li>
+          <li><a href="#listingsSection">Davao - Matina Aplaya</a></li>
+          <li><a href="#listingsSection">Davao - Bajada & Buhangin</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">For Tenants</div>
+        <ul class="footer-links">
+          <li><a href="#listingsSection">Browse Bedspaces</a></li>
+          <li><a href="messages.html">Direct Messages</a></li>
+          <li><a href="#howItWorks">Safety & Verification</a></li>
+          <li><a href="profile.html">Student Profile</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">For Landlords</div>
+        <ul class="footer-links">
+          <li><a href="add-property.html">List Your Boarding House</a></li>
+          <li><a href="dashboard.html">Landlord Dashboard</a></li>
+          <li><a href="#howItWorks">Verification Guidelines</a></li>
+          <li><a href="messages.html">Inquiries Inbox</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Livora Philippines. All rights reserved.</div>
+      <div style="display: flex; gap: 16px;">
+        <a href="#" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+        <a href="#" style="color: inherit; text-decoration: none;">Terms of Service</a>
+        <a href="#" style="color: inherit; text-decoration: none;">Safety Guide</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/mock-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile & Verification — Livora</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="Livora Home">
+        <img src="assets/logo.svg" alt="Livora Logo" class="brand-logo-img" />
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Find Spaces</a></li>
+          <li><a href="messages.html" class="nav-link">Messages</a></li>
+          <li><a href="dashboard.html" class="nav-link">Landlord Portal</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-secondary btn-sm">
+          Log Out
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: var(--space-8) 0 var(--space-16);">
+    <div class="container" style="max-width: 860px;">
+      
+      <!-- Profile Header Card -->
+      <div style="background: var(--neutral-white); border: 1px solid var(--neutral-200); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-sm); display: flex; gap: 24px; align-items: center; margin-bottom: var(--space-8); flex-wrap: wrap;">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=180&q=80" style="width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 3px solid var(--crimson-100);" alt="Profile" />
+        <div style="flex-grow: 1;">
+          <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 4px;">
+            <h1 style="font-family: var(--font-heading); font-size: 24px; font-weight: 800; color: var(--neutral-900); margin: 0;">
+              Samantha Clarisse Reyes
+            </h1>
+            <span class="badge badge-verified">✓ Verified Student</span>
+          </div>
+          <div style="font-size: 13px; color: var(--neutral-500);">
+            BS Nursing, Ateneo de Davao University • Member since July 2025
+          </div>
+        </div>
+        <button class="btn btn-secondary btn-sm" onclick="alert('Profile details updated!')">
+          Edit Profile
+        </button>
+      </div>
+
+      <!-- Verification Status Section -->
+      <div style="background: var(--crimson-50); border: 1px solid var(--crimson-200); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: var(--space-8); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <div style="font-family: var(--font-heading); font-weight: 700; color: var(--crimson-800); font-size: 15px;">
+            🛡️ Identity & University Verification Complete
+          </div>
+          <div style="font-size: 13px; color: var(--crimson-700); margin-top: 2px;">
+            Your Student ID and Emergency Contact have been verified. Landlords prioritize verified student inquiries.
+          </div>
+        </div>
+        <span class="badge badge-verified" style="background: white;">Active Badge</span>
+      </div>
+
+      <!-- Account Settings / Form -->
+      <div style="background: var(--neutral-white); border: 1px solid var(--neutral-200); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-sm);">
+        <h3 class="details-section-title" style="margin-top: 0;">Personal Information</h3>
+
+        <form onsubmit="event.preventDefault(); alert('Saved changes!');">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-control" value="Samantha Clarisse" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-control" value="Reyes" />
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" value="samantha.reyes@addu.edu.ph" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mobile Contact (+63)</label>
+              <input type="text" class="form-control" value="0917-882-4192" />
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label">University / Institution</label>
+              <input type="text" class="form-control" value="Ateneo de Davao University" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Emergency Contact Name & Phone</label>
+              <input type="text" class="form-control" value="Carlos Reyes (Father) - 0918-223-9001" />
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; margin-top: var(--space-4);">
+            <button type="submit" class="btn btn-primary">
+              Save Account Changes
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Livora Philippines.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

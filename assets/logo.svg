@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <!-- Modern Geometric Architectural Icon -->
+  <g transform="translate(4, 6)">
+    <!-- Base house & archway geometry with depth -->
+    <rect x="0" y="0" width="48" height="48" rx="14" fill="#8E1C27" />
+    <path d="M12 36V22L24 13L36 22V36" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M20 36V26C20 23.7909 21.7909 22 24 22C26.2091 22 28 23.7909 28 26V36" fill="#FBF9F6" />
+    <circle cx="24" cy="18" r="2.5" fill="#FBF9F6" />
+  </g>
+  <!-- Wordmark -->
+  <text x="64" y="34" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" letter-spacing="2.5" fill="#1A1714">LIVORA</text>
+  <text x="65" y="46" font-family="'Inter', system-ui, sans-serif" font-size="9" font-weight="600" letter-spacing="1.8" fill="#786F64">CURATED SPACES</text>
+</svg>
+
